@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HESO · UNM — Headshots</title>
 <meta name="description" content="HESO UNM professional headshots — Fall 2026. Private gallery.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/logo-badge.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HESO · UNM">
+<meta property="og:title" content="HESO · UNM — Professional Headshots">
+<meta property="og:description" content="Fall 2026 headshot gallery for HESO members. Enter your PIN to view and download your photos.">
+<meta property="og:image" content="https://heso-headshots.pages.dev/assets/logo-badge.png">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="pinpage">
@@ -16,7 +25,9 @@
       <div class="pintitle">ENTER PIN</div>
       <input type="password" inputmode="numeric" id="pinInput" placeholder="••••" autocomplete="off" maxlength="12">
       <button id="pinGo">UNLOCK</button>
+      <button id="enterGallery" class="entergallery" style="display:none">ENTER GALLERY →</button>
       <div class="pinerr" id="pinErr"></div>
+      <div class="pinhelp">Don't have the PIN? Ask a HESO board member — or contact Julio below.</div>
     </div>
     <div class="contact">
       <a class="logolink" href="https://highlandfilms.lovable.app" target="_blank" rel="noopener" aria-label="Highland Wedding and Films — portfolio">

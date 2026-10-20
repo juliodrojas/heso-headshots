@@ -19,6 +19,9 @@ h1{font-size:2rem;font-weight:400;letter-spacing:.02em;margin:.5rem 0 .2rem}
 .pinbox button{width:100%;margin-top:1rem;padding:.85rem;font-family:Arial,Helvetica,sans-serif;font-size:.85rem;letter-spacing:.25em;background:var(--gold);color:#fff;border:none;border-radius:10px;cursor:pointer;font-weight:700}
 .pinbox button:hover{background:var(--gold2)}
 .pinerr{color:#c0392b;font-size:.85rem;min-height:1.2rem;margin-top:.8rem;font-family:Arial,Helvetica,sans-serif}
+.pinhelp{color:var(--dim);font-size:.8rem;margin-top:.9rem;font-family:Arial,Helvetica,sans-serif}
+.entergallery{background:transparent!important;color:var(--gold)!important;border:1px solid var(--gold)!important}
+.entergallery:hover{background:rgba(154,116,34,.12)!important}
 
 /* Contact block (shared) */
 .logolink{display:flex;flex-direction:column;align-items:center;gap:.35rem;text-decoration:none;margin-bottom:1.5rem}
@@ -41,7 +44,7 @@ main{max-width:1200px;margin:0 auto;padding:1rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
 .card{background:var(--card);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform .2s, box-shadow .2s;border:1px solid var(--line);box-shadow:0 4px 18px rgba(120,95,40,.06)}
 .card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(120,95,40,.14)}
-.card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#eee7d8}
 .card .nm{padding:.8rem .9rem;font-size:.95rem;text-align:center;letter-spacing:.03em}
 .empty{text-align:center;color:var(--dim);padding:4rem 1rem;font-size:1.05rem}
 footer{text-align:center;padding:2.5rem 1rem 3rem;color:var(--dim);font-family:Arial,Helvetica,sans-serif;font-size:.7rem;letter-spacing:.3em}
@@ -60,6 +63,12 @@ footer .contact{max-width:460px;margin:2rem auto 0;padding-top:1.6rem}
 .lb-download{display:inline-block;margin-top:1rem;color:var(--gold);font-family:Arial,Helvetica,sans-serif;font-size:.8rem;letter-spacing:.15em;text-decoration:none}
 .lb-download:hover{color:var(--gold2)}
 .lb-counter{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;letter-spacing:.25em;color:var(--dim);margin-top:.2rem}
+.lb-report{display:inline-block;margin-top:.55rem;color:var(--dim);font-family:Arial,Helvetica,sans-serif;font-size:.72rem;letter-spacing:.08em;text-decoration:underline;text-underline-offset:3px}
+.lb-report:hover{color:var(--gold)}
+.lb-square{margin-top:.6rem;padding:.55rem 1.2rem;font-family:Arial,Helvetica,sans-serif;font-size:.72rem;letter-spacing:.18em;background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:10px;cursor:pointer}
+.lb-square:hover:not(:disabled){background:rgba(154,116,34,.12)}
+.lb-square:disabled{opacity:.5;cursor:default}
+.lb-hint{margin-top:.9rem;color:var(--dim);font-family:Arial,Helvetica,sans-serif;font-size:.72rem;line-height:1.5}
 
 /* Toolbar: search / sort / select / downloads */
 .toolbar{max-width:1200px;margin:0 auto;padding:.4rem 1rem 0;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center}

@@ -28,5 +28,16 @@
   }
   pinGo.addEventListener('click', unlock);
   pinInput.addEventListener('keydown', function(e){ if (e.key === 'Enter') unlock(); });
+
+  // Already unlocked on this device? The auth cookie lasts 30 days — offer a straight path in.
+  var enterBtn = document.getElementById('enterGallery');
+  if (enterBtn && window.fetch){
+    fetch('/gallery.html', { credentials: 'same-origin' }).then(function(r){
+      if (r.ok && !r.redirected && r.url.indexOf('gallery.html') !== -1){
+        enterBtn.style.display = 'block';
+        enterBtn.addEventListener('click', function(){ window.location.href = '/gallery.html'; });
+      }
+    }).catch(function(){});
+  }
   pinInput.focus();
 })();
