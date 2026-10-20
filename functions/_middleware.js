@@ -15,7 +15,7 @@ async function authToken(pin) {
   return Array.from(new Uint8Array(sig)).map(function(b){ return b.toString(16).padStart(2, '0'); }).join('');
 }
 
-var PUBLIC_PATHS = ['/', '/index.html', '/styles.css', '/app.js', '/api/verify', '/favicon.ico', '/assets/logo-badge.png'];
+var PUBLIC_PATHS = ['/', '/index.html', '/styles.css', '/app.js', '/api/verify', '/favicon.ico', '/robots.txt', '/assets/logo-badge.png'];
 
 export async function onRequest(context) {
   var url = new URL(context.request.url);
