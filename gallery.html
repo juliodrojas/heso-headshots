@@ -15,9 +15,21 @@
     <div class="count" id="count"></div>
   </header>
 
+  <div class="toolbar" id="toolbar" style="display:none">
+    <input type="search" id="search" placeholder="Search by name…" aria-label="Search by name">
+    <select id="sort" aria-label="Sort photos">
+      <option value="az">Name A–Z</option>
+      <option value="za">Name Z–A</option>
+    </select>
+    <button class="tbtn" id="selectToggle" type="button">SELECT</button>
+    <button class="tbtn gold" id="dlSelected" type="button" disabled>⬇ SELECTED (0)</button>
+    <button class="tbtn" id="dlAll" type="button">⬇ ALL (.ZIP)</button>
+  </div>
+
   <main>
     <div class="grid" id="grid"></div>
     <div class="empty" id="empty" style="display:none">Photos are on the way — check back soon.</div>
+    <div class="empty" id="nomatch" style="display:none">No photos match that name.</div>
   </main>
 
   <footer>
@@ -43,11 +55,13 @@
     <div class="lb-card">
       <img id="lbImg" alt="Headshot">
       <div class="lb-name" id="lbName"></div>
+      <div class="lb-counter" id="lbCounter"></div>
       <button class="lb-close" id="lbClose">BACK TO GALLERY</button>
       <br><a class="lb-download" id="lbDownload" target="_blank" download>⬇ DOWNLOAD PHOTO</a>
     </div>
   </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script src="gallery.js"></script>
 </body>
 </html>
