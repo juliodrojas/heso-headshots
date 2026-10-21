@@ -87,3 +87,12 @@ footer .contact{max-width:460px;margin:2rem auto 0;padding-top:1.6rem}
 body.selecting .card .selbadge{display:block}
 .card.sel{outline:3px solid var(--gold);outline-offset:-3px}
 .card.sel .selbadge{background:var(--gold)}
+
+/* ---------- admin mode ---------- */
+#adminBar{max-width:1100px;margin:0 auto 1rem;padding:.7rem 1rem;background:#2b2118;color:#f3e3c2;border-radius:10px;font-size:.85rem;letter-spacing:.02em;text-align:center}
+.card{position:relative}
+.card .admBtn{position:absolute;top:.5rem;right:.5rem;z-index:3;border:none;border-radius:999px;padding:.35rem .7rem;font-size:.72rem;font-weight:700;letter-spacing:.06em;cursor:pointer;background:rgba(20,14,8,.82);color:#ffd98a;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.card .admBtn:hover{background:#000;color:#ffe9b0}
+.card .admBtn:disabled{opacity:.6;cursor:wait}
+.card.is-hidden{outline:2px dashed rgba(160,40,40,.55);outline-offset:-2px}
+.card.is-hidden img{opacity:.35;filter:grayscale(.7)}

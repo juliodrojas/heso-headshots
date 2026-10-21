@@ -24,6 +24,8 @@
   var idx = 0;          // index into view for the lightbox
   var selectMode = false;
   var selected = {};    // key: photo file -> true
+  var isAdmin = false;
+  var hiddenIds = {};   // photo id -> true (admin view only)
 
   function keyOf(p){ return p.file; }
   function slugOf(p){
@@ -56,7 +58,7 @@
     nomatch.style.display = (photos.length && !view.length) ? 'block' : 'none';
     view.forEach(function(p, i){
       var card = document.createElement('div');
-      card.className = 'card' + (selected[keyOf(p)] ? ' sel' : '');
+      card.className = 'card' + (selected[keyOf(p)] ? ' sel' : '') + (hiddenIds[p.id] ? ' is-hidden' : '');
       var img = document.createElement('img');
       img.src = p.thumb || p.file; img.alt = p.name || 'Headshot'; img.loading = 'lazy';
       var nm = document.createElement('div');
@@ -64,6 +66,17 @@
       var badge = document.createElement('div');
       badge.className = 'selbadge'; badge.textContent = selected[keyOf(p)] ? '✓' : '';
       card.appendChild(img); card.appendChild(nm); card.appendChild(badge);
+      if (isAdmin){
+        var ab = document.createElement('button');
+        ab.type = 'button';
+        ab.className = 'admBtn';
+        ab.textContent = hiddenIds[p.id] ? '↩ RESTORE' : '✕ HIDE';
+        ab.addEventListener('click', function(ev){
+          ev.stopPropagation();
+          adminAction(hiddenIds[p.id] ? 'restore' : 'hide', p, ab);
+        });
+        card.appendChild(ab);
+      }
       card.addEventListener('click', function(){
         if (selectMode){
           var k = keyOf(p);
@@ -239,9 +252,51 @@
   dlSelected.addEventListener('click', function(){ downloadZip(selectedList(), dlSelected, 'ADDING'); });
   dlAll.addEventListener('click', function(){ downloadZip(photos, dlAll, 'ADDING'); });
 
+  /* ---------- admin mode ---------- */
+  function adminAction(action, p, btn){
+    var orig = btn.textContent;
+    btn.disabled = true; btn.textContent = '⏳…';
+    fetch('/api/admin/action', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: action, ids: [p.id] })
+    }).then(function(r){ return r.json(); }).then(function(d){
+      if (d && d.ok){
+        hiddenIds = {};
+        (d.hidden || []).forEach(function(id){ hiddenIds[id] = true; });
+        updateAdminBar();
+        render();
+      } else {
+        btn.disabled = false; btn.textContent = orig;
+        alert('That did not go through — try again.');
+      }
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = orig;
+      alert('Network hiccup — try again.');
+    });
+  }
+  function updateAdminBar(){
+    var bar = document.getElementById('adminBar');
+    if (!bar || !isAdmin) return;
+    var n = Object.keys(hiddenIds).length;
+    bar.style.display = 'block';
+    bar.textContent = '🛠 ADMIN MODE — ✕ HIDE removes a photo from the member gallery instantly (you keep seeing it here, dimmed). ' + n + ' hidden.';
+  }
+  function probeAdmin(){
+    fetch('/api/admin/state').then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
+      if (d && d.admin){
+        isAdmin = true;
+        hiddenIds = {};
+        (d.hidden || []).forEach(function(id){ hiddenIds[id] = true; });
+        updateAdminBar();
+        render();
+      }
+    }).catch(function(){});
+  }
+
   /* ---------- load manifest ---------- */
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'assets/manifest.json', true);
+  xhr.open('GET', '/api/manifest', true);
   xhr.timeout = 8000;
   xhr.onreadystatechange = function(){
     if (xhr.readyState !== 4) return;
@@ -257,6 +312,7 @@
     count.textContent = photos.length + (photos.length === 1 ? ' PHOTO' : ' PHOTOS');
     applyView();
     updateSelBtn();
+    probeAdmin();
     // Deep link: gallery.html#photo-firstname-lastname opens that photo directly.
     var m = (window.location.hash || '').match(/^#photo-(.+)$/);
     if (m){
