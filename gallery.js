@@ -18,6 +18,7 @@
   var lbReport = document.getElementById('lbReport');
   var lbSquare = document.getElementById('lbSquare');
   var lbCopy = document.getElementById('lbCopy');
+  var lbAdmin = document.getElementById('lbAdmin');
 
   var photos = [];      // full manifest
   var view = [];        // filtered + sorted list the user sees/navigates
@@ -109,6 +110,10 @@
     if (lbDownload){
       lbDownload.href = p.file;
       lbDownload.setAttribute('download', fname(p));
+    }
+    if (lbAdmin){
+      lbAdmin.style.display = isAdmin ? '' : 'none';
+      lbAdmin.textContent = hiddenIds[p.id] ? '↩ RESTORE THIS PHOTO' : '✕ HIDE THIS PHOTO';
     }
     if (lbReport){
       lbReport.href = 'mailto:julio.d.rojas.loo@gmail.com'
@@ -226,6 +231,15 @@
     });
   }
 
+  /* ---------- admin hide/restore from the lightbox ---------- */
+  if (lbAdmin){
+    lbAdmin.addEventListener('click', function(){
+      if (!isAdmin) return;
+      var p = view[idx]; if (!p) return;
+      adminAction(hiddenIds[p.id] ? 'restore' : 'hide', p, lbAdmin);
+    });
+  }
+
   /* ---------- copy my photo link ---------- */
   if (lbCopy){
     lbCopy.addEventListener('click', function(){
@@ -266,6 +280,7 @@
         (d.hidden || []).forEach(function(id){ hiddenIds[id] = true; });
         updateAdminBar();
         render();
+        if (lb.classList.contains('open')) openLb(idx);
       } else {
         btn.disabled = false; btn.textContent = orig;
         alert('That did not go through — try again.');

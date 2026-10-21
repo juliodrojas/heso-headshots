@@ -96,3 +96,14 @@ body.selecting .card .selbadge{display:block}
 .card .admBtn:disabled{opacity:.6;cursor:wait}
 .card.is-hidden{outline:2px dashed rgba(160,40,40,.55);outline-offset:-2px}
 .card.is-hidden img{opacity:.35;filter:grayscale(.7)}
+
+/* ---------- mobile gallery: 4 across, tap for options ---------- */
+@media (max-width: 640px){
+  .grid{grid-template-columns:repeat(4,1fr);gap:5px}
+  .card{border-radius:8px}
+  .card:hover{transform:none}
+  .card .nm{display:none}
+  .card .admBtn{display:none}
+  .card .selbadge{top:.3rem;right:.3rem;width:1.3rem;height:1.3rem;font-size:.8rem;line-height:1.15rem;border-width:1px}
+  .toolbar{gap:.4rem}
+}
