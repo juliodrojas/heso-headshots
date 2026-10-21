@@ -62,6 +62,13 @@
       card.className = 'card' + (selected[keyOf(p)] ? ' sel' : '') + (hiddenIds[p.id] ? ' is-hidden' : '');
       var img = document.createElement('img');
       img.src = p.thumb || p.file; img.alt = p.name || 'Headshot'; img.loading = 'lazy'; img.decoding = 'async';
+      var digits = String(p.id || '').replace(/\D/g, '');
+      if (digits){
+        var tnum = document.createElement('span');
+        tnum.className = 'tnum';
+        tnum.textContent = 'HESO / ' + ('000' + digits).slice(-3);
+        card.appendChild(tnum);
+      }
       var nm = document.createElement('div');
       nm.className = 'nm'; nm.textContent = p.name || '';
       var badge = document.createElement('div');

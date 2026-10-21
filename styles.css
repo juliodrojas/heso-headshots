@@ -244,3 +244,196 @@ footer{color:var(--dim)}
   .gallerypage header{padding:2.4rem 1rem 1.1rem}
   .marquee{margin-left:.6rem;margin-right:.6rem}
 }
+
+/* ============================================================
+   WHITE LIES THEME — white / chrome / ice Y2K archive
+   (after whitelies.lovable.app, the White Lie Party Archives)
+   ============================================================ */
+:root{
+  --bg:#eef2f5; --bg2:#ffffff; --card:#ffffff;
+  --gold:#5b7d99; --gold2:#2e4a61; --ink:#0d1319; --dim:#68798a;
+  --line:#dbe4ea;
+}
+body{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  background:
+    radial-gradient(1000px 480px at 50% -5%, rgba(140,200,245,.35), transparent 60%),
+    radial-gradient(900px 600px at 90% 110%, rgba(190,215,235,.35), transparent 60%),
+    linear-gradient(180deg,#f7fafc,#e9eff4);
+  color:var(--ink);
+}
+body::after{
+  opacity:.05;
+  background:repeating-linear-gradient(0deg, rgba(70,110,140,.5) 0 1px, transparent 1px 3px);
+}
+::selection{background:#0d1319;color:#bfe3ff}
+
+/* chrome display type */
+.gallerypage h1,.pinwrap h1,.roll-title{
+  font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;
+  background:linear-gradient(180deg,#54687e 0%,#0d1319 52%,#63798f 78%,#10161d 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:none;letter-spacing:.01em;
+}
+.ice-dot{
+  background:none;color:#2ea3f2;-webkit-text-fill-color:#2ea3f2;
+  text-shadow:0 0 14px rgba(46,163,242,.45);
+}
+.brand{
+  font-family:ui-monospace,'SF Mono',Menlo,monospace;color:#43586c;
+  letter-spacing:.34em;font-size:.68rem;
+}
+.kicker{
+  font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.66rem;
+  letter-spacing:.32em;color:#5b7d99;text-transform:uppercase;margin-bottom:.5rem;
+}
+
+/* ---------- hero ---------- */
+.gallerypage header.hero{
+  position:relative;min-height:92svh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:4.5rem 1.2rem 3.5rem;overflow:hidden;
+}
+.gallerypage header.hero::after{content:none}
+.hero-strip{
+  position:absolute;inset:0;display:flex;gap:6px;justify-content:center;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 18%,#000 78%,transparent);
+  mask-image:linear-gradient(180deg,transparent,#000 18%,#000 78%,transparent);
+  opacity:.4;
+}
+.hero-strip img{
+  height:100%;width:auto;min-width:19%;object-fit:cover;flex:1 1 0;
+  filter:saturate(.82) brightness(1.07) contrast(.97);
+}
+.hero-strip::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(247,250,252,.72),rgba(247,250,252,.42) 42%,rgba(238,242,245,.94));
+}
+.hero-inner{position:relative;z-index:1;max-width:60rem}
+.hero-capsule{
+  display:inline-block;margin-top:1rem;font-family:ui-monospace,'SF Mono',Menlo,monospace;
+  font-size:.64rem;letter-spacing:.34em;color:#2e4a61;text-transform:uppercase;
+  border:1px solid rgba(91,125,153,.55);border-radius:999px;padding:.45rem 1.1rem;
+  background:rgba(255,255,255,.55);backdrop-filter:blur(6px);
+}
+.gallerypage .hero h1{font-size:clamp(2.7rem,10vw,6.8rem);line-height:.98;margin:1.3rem 0 .4rem}
+.hero-vol{
+  font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.78rem;
+  letter-spacing:.4em;color:#2ea3f2;text-transform:uppercase;
+}
+.gallerypage .hero .sub{margin-top:1.3rem;color:#3c4f61;font-size:1rem;line-height:1.65}
+.gallerypage .hero .count{
+  display:inline-block;margin-top:1.4rem;font-family:ui-monospace,'SF Mono',Menlo,monospace;
+  font-size:.7rem;letter-spacing:.3em;color:#2e4a61;
+  border:1px solid rgba(91,125,153,.55);border-radius:999px;padding:.5rem 1.2rem;
+  background:rgba(255,255,255,.55);
+}
+.hero-cta{
+  display:inline-block;margin-top:1.8rem;font-family:'Space Grotesk',sans-serif;font-weight:700;
+  font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;
+  color:#fff;background:#0d1319;padding:1rem 2.3rem;border-radius:999px;
+  box-shadow:0 14px 34px rgba(13,19,25,.28),0 0 0 1px rgba(255,255,255,.35) inset;
+  transition:transform .2s;
+}
+.hero-cta:hover{transform:scale(1.045)}
+.hero-scroll{
+  margin-top:2.2rem;font-family:ui-monospace,'SF Mono',Menlo,monospace;
+  font-size:.62rem;letter-spacing:.42em;color:#68798a;animation:bob 2s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+/* ---------- camera roll section ---------- */
+.roll-head{padding:3.2rem .2rem 1.4rem}
+.roll-title{font-size:clamp(1.9rem,5.5vw,3.4rem);line-height:1}
+.roll-sub{color:var(--dim);margin-top:.55rem;font-size:.98rem}
+.roll-end{
+  text-align:center;padding:2.6rem 1rem 1rem;
+  font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.64rem;
+  letter-spacing:.36em;color:#8ba0b3;text-transform:uppercase;
+}
+
+/* ---------- marquee: chrome strip ---------- */
+.marquee{
+  background:rgba(255,255,255,.65);border-top:1px solid #ccd9e2;border-bottom:1px solid #ccd9e2;
+  max-width:none;margin:0;padding:.6rem 0;
+}
+.marquee span{
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.7rem;
+  letter-spacing:.3em;color:#0d1319;
+}
+
+/* ---------- toolbar: white glass pills ---------- */
+.toolbar input[type=search],.toolbar select{
+  background:rgba(255,255,255,.8);border:1px solid #c3d2dd;color:var(--ink);
+  border-radius:999px;backdrop-filter:blur(6px);
+}
+.toolbar input[type=search]:focus,.toolbar select:focus{
+  border-color:#2ea3f2;box-shadow:0 0 0 3px rgba(46,163,242,.18);
+}
+.toolbar select option{background:#fff;color:var(--ink)}
+.tbtn{
+  background:rgba(255,255,255,.8);color:var(--ink);
+  border:1px solid #9db4c6;border-radius:999px;
+}
+.tbtn:hover:not(:disabled){background:#e7f1f8}
+.tbtn.gold{background:#0d1319;color:#fff;border-color:#0d1319}
+.tbtn.gold:hover:not(:disabled){background:#22303d}
+
+/* ---------- tiles: white cards + archive index chip ---------- */
+.grid{gap:1rem}
+.card{
+  background:#fff;border:1px solid #d5e0e8;border-radius:16px;
+  box-shadow:0 4px 16px rgba(46,74,97,.08);
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(46,115,170,.18)}
+.card img{background:#e6edf2}
+.card .tnum{
+  position:absolute;top:.55rem;left:.55rem;z-index:2;
+  font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.6rem;letter-spacing:.14em;
+  color:#0d1319;background:rgba(255,255,255,.78);backdrop-filter:blur(5px);
+  border:1px solid rgba(160,185,205,.7);border-radius:999px;padding:.22rem .55rem;
+  pointer-events:none;
+}
+.card .nm{
+  background:linear-gradient(180deg,transparent,rgba(8,14,20,.72));color:#f4f9fc;
+}
+
+/* ---------- PIN page: chrome box ---------- */
+.pinbox{
+  background:rgba(255,255,255,.85);border:1px solid #c3d2dd;
+  box-shadow:0 24px 60px rgba(46,74,97,.16);backdrop-filter:blur(8px);
+}
+.pinbox input{background:#f2f7fa;border:1px solid #b9cbd9;color:var(--ink)}
+.pinbox input:focus{border-color:#2ea3f2;box-shadow:0 0 0 3px rgba(46,163,242,.18)}
+.pinbox button{background:#0d1319;color:#fff}
+.pinbox button:hover{background:#22303d}
+.entergallery{color:#2e4a61!important;border:1px solid #9db4c6!important;background:transparent!important}
+.pintitle{color:#5b7d99}
+.logolink img{border:1px solid #c3d2dd;box-shadow:0 10px 30px rgba(46,74,97,.18)}
+.pinerr{color:#c0392b}
+
+/* ---------- lightbox: dark stage, white card ---------- */
+.lightbox{background:rgba(10,16,22,.93)}
+.lb-card{
+  background:#ffffff;border:1px solid #c3d2dd;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+.lb-name{color:var(--ink)}
+.lb-close{color:#2e4a61;border-color:#9db4c6}
+.lb-close:hover{background:#e7f1f8}
+.lb-square{color:#2e4a61;border-color:#9db4c6}
+.lb-square:hover:not(:disabled){background:#e7f1f8}
+.lb-download{color:#1c7ec2}
+
+/* admin bar stays a dark chip on the white theme */
+#adminBar{background:#0d1319;border:1px solid #0d1319;color:#dcebf5}
+
+/* ---------- mobile re-assertions ---------- */
+@media (max-width:640px){
+  .grid{grid-template-columns:repeat(4,1fr);gap:5px}
+  .card{border-radius:9px}
+  .card .nm{display:none}
+  .card .tnum{font-size:.5rem;padding:.14rem .4rem;top:.35rem;left:.35rem;letter-spacing:.08em}
+  .gallerypage header.hero{min-height:88svh;padding:3.4rem 1rem 2.6rem}
+  .roll-head{padding:2.4rem .2rem 1rem}
+  .marquee{margin:0}
+}
