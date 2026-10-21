@@ -263,7 +263,7 @@ body{
   color:var(--ink);
 }
 body::after{
-  opacity:.05;
+  opacity:.022;
   background:repeating-linear-gradient(0deg, rgba(70,110,140,.5) 0 1px, transparent 1px 3px);
 }
 ::selection{background:#0d1319;color:#bfe3ff}
