@@ -73,6 +73,9 @@
       card.className = 'card' + (selected[keyOf(p)] ? ' sel' : '') + (hiddenIds[p.id] ? ' is-hidden' : '');
       var img = document.createElement('img');
       img.src = p.thumb || p.file; img.alt = p.name || 'Headshot'; img.loading = 'lazy'; img.decoding = 'async';
+      if (p.w && p.h){ img.width = p.w; img.height = p.h; img.style.aspectRatio = p.w + ' / ' + p.h; }
+      img.onload = function(){ img.classList.add('loaded'); };
+      img.onerror = function(){ img.classList.add('loaded'); };
       var digits = String(p.id || '').replace(/\D/g, '');
       if (digits){
         var tnum = document.createElement('span');
