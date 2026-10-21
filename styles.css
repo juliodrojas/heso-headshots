@@ -128,3 +128,119 @@ button,input,select,a{touch-action:manipulation}
   .lb-card{padding:.9rem .7rem 1.1rem}
   .toolbar{padding-left:max(.6rem,env(safe-area-inset-left));padding-right:max(.6rem,env(safe-area-inset-right))}
 }
+
+/* ============================================================
+   PARTY THEME — dark gallery edition (after neonparty.pages.dev)
+   espresso-black + gold; photos as heroes, minimal chrome
+   ============================================================ */
+:root{
+  --bg:#131009; --bg2:#1d1710; --card:#1d1710;
+  --gold:#c9a24b; --gold2:#e8c87a; --ink:#f3ead8; --dim:#a89a80;
+  --line:#33291b;
+}
+body{
+  background:
+    radial-gradient(1100px 520px at 50% -5%, rgba(201,162,75,.15), transparent 60%),
+    radial-gradient(900px 620px at 88% 110%, rgba(201,162,75,.07), transparent 60%),
+    var(--bg);
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2000;opacity:.045;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.7) 0 1px, transparent 1px 3px);
+}
+::selection{background:var(--gold);color:#171106}
+
+/* header: display treatment */
+.brand{color:var(--gold2)}
+.gallerypage header{padding:3.4rem 1rem 1.6rem}
+.gallerypage header::after{
+  content:"";display:block;width:130px;height:2px;margin:1.15rem auto 0;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.gallerypage h1,.pinwrap h1{
+  font-size:clamp(2.15rem,6vw,3.3rem);color:var(--ink);letter-spacing:.015em;
+  text-shadow:0 0 26px rgba(201,162,75,.28);
+}
+.count{color:var(--gold2)}
+.logolink img{box-shadow:0 10px 34px rgba(0,0,0,.6);border:1px solid rgba(201,162,75,.4)}
+footer{color:var(--dim)}
+
+/* marquee (party signature) */
+.marquee{
+  overflow:hidden;white-space:nowrap;max-width:1200px;margin:.4rem auto .2rem;
+  border-top:1px solid rgba(201,162,75,.28);border-bottom:1px solid rgba(201,162,75,.28);
+  padding:.55rem 0;
+}
+.marquee .track{display:inline-flex;animation:hscroll 30s linear infinite}
+.marquee span{
+  display:inline-block;padding-right:2.6rem;font-family:Arial,Helvetica,sans-serif;
+  font-size:.68rem;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;
+}
+@keyframes hscroll{to{transform:translateX(-50%)}}
+
+/* toolbar: glass pills, no boxes */
+.toolbar input[type=search],.toolbar select{
+  background:rgba(255,244,214,.05);border:1px solid rgba(201,162,75,.35);
+  color:var(--ink);border-radius:999px;
+}
+.toolbar input[type=search]::placeholder{color:var(--dim)}
+.toolbar input[type=search]:focus,.toolbar select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,75,.15)}
+.toolbar select option{background:#1d1710;color:var(--ink)}
+.tbtn{
+  background:rgba(255,244,214,.04);color:var(--ink);
+  border:1px solid rgba(201,162,75,.45);border-radius:999px;
+}
+.tbtn:hover:not(:disabled){background:rgba(201,162,75,.16)}
+.tbtn.gold{background:linear-gradient(90deg,#a8823a,var(--gold));color:#171106;border-color:transparent}
+.tbtn.gold:hover:not(:disabled){background:linear-gradient(90deg,var(--gold),#dcb968)}
+
+/* cards: image-first tiles, name as cinematic overlay */
+.grid{gap:.9rem}
+.card{
+  background:transparent;border:1px solid rgba(201,162,75,.16);border-radius:14px;
+  box-shadow:0 6px 22px rgba(0,0,0,.35);
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 44px rgba(201,162,75,.20)}
+.card img{background:#241c12}
+.card .nm{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;text-align:left;
+  padding:1.5rem .9rem .6rem;font-size:.92rem;color:#f7efdd;letter-spacing:.03em;
+  background:linear-gradient(180deg,transparent,rgba(8,6,3,.74));
+  text-shadow:0 1px 8px rgba(0,0,0,.65);pointer-events:none;
+}
+
+/* PIN page: dark glass */
+.pinbox{
+  background:rgba(255,244,214,.03);border:1px solid rgba(201,162,75,.30);
+  box-shadow:0 24px 60px rgba(0,0,0,.5);
+}
+.pinbox input{background:rgba(0,0,0,.35);border:1px solid rgba(201,162,75,.40);color:var(--ink)}
+.pinbox input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,75,.15)}
+.pinbox button{background:linear-gradient(90deg,#a8823a,var(--gold));color:#171106}
+.pinbox button:hover{background:linear-gradient(90deg,var(--gold),#dcb968)}
+.entergallery{color:var(--gold2)!important;border:1px solid rgba(201,162,75,.5)!important;background:transparent!important}
+.pinerr{color:#ff9d8a}
+
+/* lightbox: dark panel */
+.lightbox{background:rgba(9,7,4,.95)}
+.lb-card{
+  background:#1d1710;border:1px solid rgba(201,162,75,.28);
+  box-shadow:0 30px 80px rgba(0,0,0,.65);
+}
+.lb-name{color:var(--ink)}
+.lb-close{color:var(--gold2)}
+.lb-close:hover{background:rgba(201,162,75,.14)}
+.lb-square{color:var(--gold2)}
+.lb-square:hover:not(:disabled){background:rgba(201,162,75,.14)}
+
+/* admin bar on dark */
+#adminBar{background:#241a0e;border:1px solid rgba(201,162,75,.35)}
+
+/* re-assert mobile rules above the theme layer */
+@media (max-width:640px){
+  .grid{grid-template-columns:repeat(4,1fr);gap:5px}
+  .card{border-radius:8px}
+  .card .nm{display:none}
+  .gallerypage header{padding:2.4rem 1rem 1.1rem}
+  .marquee{margin-left:.6rem;margin-right:.6rem}
+}
