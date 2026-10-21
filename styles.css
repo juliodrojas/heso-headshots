@@ -474,3 +474,14 @@ body::after{
   .card .tnum{font-size:.58rem;padding:.28rem .5rem}
   .card .nm{font-size:.92rem}
 }
+
+/* hero restraint — smaller + subtler (Julio, Oct 21) */
+.gallerypage header.hero{min-height:64svh;padding:3.2rem 1.2rem 2.6rem}
+.hero-strip{opacity:.26}
+.hero-strip::after{
+  background:linear-gradient(180deg,rgba(247,250,252,.84),rgba(247,250,252,.55) 42%,rgba(238,242,245,.96));
+}
+.gallerypage .hero h1{font-size:clamp(2.3rem,8vw,5rem)}
+@media (max-width:640px){
+  .gallerypage header.hero{min-height:58svh;padding:2.8rem 1rem 2.2rem}
+}
