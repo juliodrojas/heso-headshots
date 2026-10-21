@@ -51,9 +51,9 @@ footer{text-align:center;padding:2.5rem 1rem 3rem;color:var(--dim);font-family:A
 footer .contact{max-width:460px;margin:2rem auto 0;padding-top:1.6rem}
 
 /* Lightbox */
-.lightbox{position:fixed;inset:0;background:rgba(30,26,18,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:1rem}
+.lightbox{position:fixed;inset:0;background:rgba(30,26,18,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:1rem;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .lightbox.open{display:flex}
-.lb-card{text-align:center;max-width:min(560px,92vw);background:var(--bg2);border-radius:14px;padding:1.2rem}
+.lb-card{text-align:center;max-width:min(560px,92vw);background:var(--bg2);border-radius:14px;padding:1.2rem;margin:auto}
 .lb-card img{max-width:100%;max-height:62vh;border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
 .lb-name{margin:1rem 0 .4rem;font-size:1.2rem;color:var(--ink)}
 .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:3rem;cursor:pointer;padding:1rem;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.5)}
@@ -165,19 +165,6 @@ body::after{
 .logolink img{box-shadow:0 10px 34px rgba(0,0,0,.6);border:1px solid rgba(201,162,75,.4)}
 footer{color:var(--dim)}
 
-/* marquee (party signature) */
-.marquee{
-  overflow:hidden;white-space:nowrap;max-width:1200px;margin:.4rem auto .2rem;
-  border-top:1px solid rgba(201,162,75,.28);border-bottom:1px solid rgba(201,162,75,.28);
-  padding:.55rem 0;
-}
-.marquee .track{display:inline-flex;animation:hscroll 30s linear infinite}
-.marquee span{
-  display:inline-block;padding-right:2.6rem;font-family:Arial,Helvetica,sans-serif;
-  font-size:.68rem;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;
-}
-@keyframes hscroll{to{transform:translateX(-50%)}}
-
 /* toolbar: glass pills, no boxes */
 .toolbar input[type=search],.toolbar select{
   background:rgba(255,244,214,.05);border:1px solid rgba(201,162,75,.35);
@@ -242,7 +229,6 @@ footer{color:var(--dim)}
   .card{border-radius:8px}
   .card .nm{display:none}
   .gallerypage header{padding:2.4rem 1rem 1.1rem}
-  .marquee{margin-left:.6rem;margin-right:.6rem}
 }
 
 /* ============================================================
@@ -351,16 +337,6 @@ body::after{
   letter-spacing:.36em;color:#8ba0b3;text-transform:uppercase;
 }
 
-/* ---------- marquee: chrome strip ---------- */
-.marquee{
-  background:rgba(255,255,255,.65);border-top:1px solid #ccd9e2;border-bottom:1px solid #ccd9e2;
-  max-width:none;margin:0;padding:.6rem 0;
-}
-.marquee span{
-  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.7rem;
-  letter-spacing:.3em;color:#0d1319;
-}
-
 /* ---------- toolbar: white glass pills ---------- */
 .toolbar input[type=search],.toolbar select{
   background:rgba(255,255,255,.8);border:1px solid #c3d2dd;color:var(--ink);
@@ -435,7 +411,6 @@ body::after{
   .card .tnum{font-size:.5rem;padding:.14rem .4rem;top:.35rem;left:.35rem;letter-spacing:.08em}
   .gallerypage header.hero{min-height:88svh;padding:3.4rem 1rem 2.6rem}
   .roll-head{padding:2.4rem .2rem 1rem}
-  .marquee{margin:0}
 }
 
 /* ============================================================
@@ -497,3 +472,6 @@ body::after{
 .contact .cicon{width:1.1rem}
 footer{padding:1.8rem 1rem 2.2rem}
 footer .contact{margin-top:1.2rem;padding-top:1.1rem}
+
+/* mobile: kill double-tap zoom (page zoom is locked in the viewport meta) */
+body{touch-action:manipulation}
