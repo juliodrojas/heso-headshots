@@ -22,19 +22,28 @@ function json(data, status) {
   });
 }
 
+function cookie(name, token) {
+  return name + '=' + token + '; Path=/; HttpOnly; SameSite=Lax; Secure; Max-Age=2592000';
+}
+
 export async function onRequestPost(context) {
   var body = {};
   try { body = await context.request.json(); } catch (e) { return json({ ok: false }, 400); }
-  var pin = context.env.HESO_PIN || '';
-  if (!pin) return json({ ok: false, error: 'not configured' }, 500);
-  if (!safeEqual(body.pin, pin)) return json({ ok: false }, 401);
-  var token = await authToken(pin);
-  return new Response(JSON.stringify({ ok: true }), {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/json',
-      'Cache-Control': 'no-store',
-      'Set-Cookie': 'heso_auth=' + token + '; Path=/; HttpOnly; SameSite=Lax; Secure; Max-Age=2592000'
-    }
-  });
+  var memberPin = context.env.HESO_PIN || '';
+  var adminPin = context.env.HESO_ADMIN_PIN || '';
+  if (!memberPin) return json({ ok: false, error: 'not configured' }, 500);
+  var pin = String(body.pin || '');
+
+  if (safeEqual(pin, memberPin)) {
+    var h1 = new Headers({ 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
+    h1.append('Set-Cookie', cookie('heso_auth', await authToken(memberPin)));
+    return new Response(JSON.stringify({ ok: true, role: 'member' }), { status: 200, headers: h1 });
+  }
+  if (adminPin && safeEqual(pin, adminPin)) {
+    var h2 = new Headers({ 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
+    h2.append('Set-Cookie', cookie('heso_auth', await authToken(memberPin)));
+    h2.append('Set-Cookie', cookie('heso_admin', await authToken(adminPin)));
+    return new Response(JSON.stringify({ ok: true, role: 'admin' }), { status: 200, headers: h2 });
+  }
+  return json({ ok: false }, 401);
 }
