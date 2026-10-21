@@ -40,6 +40,7 @@
   function selectedList(){ return photos.filter(function(p){ return selected[keyOf(p)]; }); }
 
   function updateSelBtn(){
+    if (!dlSelected) return;
     var n = selectedList().length;
     dlSelected.textContent = '⬇ SELECTED (' + n + ')';
     dlSelected.disabled = n === 0;
@@ -47,9 +48,9 @@
 
   /* ---------- grid ---------- */
   function applyView(){
-    var q = (searchInput.value || '').trim().toLowerCase();
+    var q = searchInput ? (searchInput.value || '').trim().toLowerCase() : '';
     view = photos.filter(function(p){ return !q || (p.name || '').toLowerCase().indexOf(q) !== -1; });
-    var mode = sortSel.value;
+    var mode = sortSel ? sortSel.value : 'num';
     if (mode === 'az' || mode === 'za'){
       var dir = mode === 'za' ? -1 : 1;
       view.sort(function(a, b){ return dir * String(a.name || '').localeCompare(String(b.name || ''), undefined, { numeric: true }); });
@@ -277,16 +278,16 @@
   }
 
   /* ---------- toolbar wiring ---------- */
-  searchInput.addEventListener('input', applyView);
-  sortSel.addEventListener('change', applyView);
-  selectToggle.addEventListener('click', function(){
+  if (searchInput) searchInput.addEventListener('input', applyView);
+  if (sortSel) sortSel.addEventListener('change', applyView);
+  if (selectToggle) selectToggle.addEventListener('click', function(){
     selectMode = !selectMode;
     document.body.classList.toggle('selecting', selectMode);
     selectToggle.textContent = selectMode ? 'DONE' : 'SELECT';
     if (!selectMode){ selected = {}; updateSelBtn(); render(); }
   });
-  dlSelected.addEventListener('click', function(){ downloadZip(selectedList(), dlSelected, 'ADDING'); });
-  dlAll.addEventListener('click', function(){ downloadZip(photos, dlAll, 'ADDING'); });
+  if (dlSelected) dlSelected.addEventListener('click', function(){ downloadZip(selectedList(), dlSelected, 'ADDING'); });
+  if (dlAll) dlAll.addEventListener('click', function(){ downloadZip(photos, dlAll, 'ADDING'); });
 
   /* ---------- admin mode ---------- */
   function adminAction(action, p, btn){
@@ -345,7 +346,7 @@
       count.textContent = '';
       return;
     }
-    toolbar.style.display = 'flex';
+    if (toolbar) toolbar.style.display = 'flex';
     count.textContent = photos.length + (photos.length === 1 ? ' PHOTO' : ' PHOTOS');
     applyView();
     updateSelBtn();
