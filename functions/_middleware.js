@@ -15,6 +15,29 @@ async function authToken(pin) {
   return Array.from(new Uint8Array(sig)).map(function(b){ return b.toString(16).padStart(2, '0'); }).join('');
 }
 
+function cookieVal(request, name) {
+  var cookie = request.headers.get('Cookie') || '';
+  var m = cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([a-f0-9]{64})(?:;|$)'));
+  return m ? m[1] : '';
+}
+
+async function isAdmin(request, env) {
+  var adminPin = env.HESO_ADMIN_PIN || '';
+  if (!adminPin) return false;
+  var tok = cookieVal(request, 'heso_admin');
+  if (!tok) return false;
+  try { return safeEqual(tok, await authToken(adminPin)); } catch (e) { return false; }
+}
+
+async function hiddenIds(env) {
+  if (!env.HESO_KV) return [];
+  try {
+    var v = await env.HESO_KV.get('hidden');
+    var arr = v ? JSON.parse(v) : [];
+    return Array.isArray(arr) ? arr : [];
+  } catch (e) { return []; }
+}
+
 var PUBLIC_PATHS = ['/', '/index.html', '/styles.css', '/app.js', '/api/verify', '/favicon.ico', '/robots.txt', '/assets/logo-badge.png', '/assets/og-preview.jpg'];
 
 export async function onRequest(context) {
@@ -25,12 +48,26 @@ export async function onRequest(context) {
   var pin = context.env.HESO_PIN || '';
   var authed = false;
   if (pin) {
-    var cookie = context.request.headers.get('Cookie') || '';
-    var m = cookie.match(/(?:^|;\s*)heso_auth=([a-f0-9]{64})(?:;|$)/);
-    if (m) {
-      try { authed = safeEqual(m[1], await authToken(pin)); } catch (e) { authed = false; }
+    var tok = cookieVal(context.request, 'heso_auth');
+    if (tok) {
+      try { authed = safeEqual(tok, await authToken(pin)); } catch (e) { authed = false; }
     }
   }
-  if (authed) return context.next();
-  return Response.redirect(url.origin + '/', 302);
+  if (!authed) return Response.redirect(url.origin + '/', 302);
+
+  var admin = await isAdmin(context.request, context.env);
+  if (admin) return context.next();
+
+  // Members never see the raw manifest (it would list hidden photos too).
+  if (path === '/assets/manifest.json') {
+    return Response.redirect(url.origin + '/api/manifest', 302);
+  }
+  // Hidden photos are blocked for everyone except the admin.
+  if (path.indexOf('/assets/photos/') === 0) {
+    var file = path.slice('/assets/photos/'.length);
+    var id = file.replace(/\.jpg$/i, '');
+    var hidden = await hiddenIds(context.env);
+    if (hidden.indexOf(id) !== -1) return Response.redirect(url.origin + '/', 302);
+  }
+  return context.next();
 }
