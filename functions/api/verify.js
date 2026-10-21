@@ -37,6 +37,9 @@ export async function onRequestPost(context) {
   if (safeEqual(pin, memberPin)) {
     var h1 = new Headers({ 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
     h1.append('Set-Cookie', cookie('heso_auth', await authToken(memberPin)));
+    // A member login must end any earlier admin session on this device:
+    // otherwise the stale heso_admin cookie keeps admin mode alive.
+    h1.append('Set-Cookie', 'heso_admin=; Path=/; HttpOnly; SameSite=Lax; Secure; Max-Age=0');
     return new Response(JSON.stringify({ ok: true, role: 'member' }), { status: 200, headers: h1 });
   }
   if (adminPin && safeEqual(pin, adminPin)) {
