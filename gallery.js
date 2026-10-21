@@ -49,8 +49,18 @@
   function applyView(){
     var q = (searchInput.value || '').trim().toLowerCase();
     view = photos.filter(function(p){ return !q || (p.name || '').toLowerCase().indexOf(q) !== -1; });
-    var dir = sortSel.value === 'za' ? -1 : 1;
-    view.sort(function(a, b){ return dir * String(a.name || '').localeCompare(String(b.name || '')); });
+    var mode = sortSel.value;
+    if (mode === 'az' || mode === 'za'){
+      var dir = mode === 'za' ? -1 : 1;
+      view.sort(function(a, b){ return dir * String(a.name || '').localeCompare(String(b.name || ''), undefined, { numeric: true }); });
+    } else {
+      // Archive order: sequential by photo number (HESO 8 -> 115), like the other archives
+      view.sort(function(a, b){
+        var na = parseInt(String(a.id || '').replace(/\D/g, ''), 10) || 0;
+        var nb = parseInt(String(b.id || '').replace(/\D/g, ''), 10) || 0;
+        return na - nb;
+      });
+    }
     render();
   }
 
@@ -73,7 +83,10 @@
       nm.className = 'nm'; nm.textContent = p.name || '';
       var badge = document.createElement('div');
       badge.className = 'selbadge'; badge.textContent = selected[keyOf(p)] ? '✓' : '';
-      card.appendChild(img); card.appendChild(nm); card.appendChild(badge);
+      var cap = document.createElement('div'); cap.className = 'cap';
+      var kick = document.createElement('div'); kick.className = 'cap-kicker'; kick.textContent = 'HESO · UNM';
+      cap.appendChild(kick); cap.appendChild(nm);
+      card.appendChild(img); card.appendChild(cap); card.appendChild(badge);
       if (isAdmin){
         var ab = document.createElement('button');
         ab.type = 'button';
