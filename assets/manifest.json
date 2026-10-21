@@ -3,570 +3,760 @@
   "file": "assets/photos/HESO-10.jpg",
   "thumb": "assets/thumbs/HESO-10.jpg",
   "name": "HESO 10",
-  "id": "HESO-10"
+  "id": "HESO-10",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-100.jpg",
   "thumb": "assets/thumbs/HESO-100.jpg",
   "name": "HESO 100",
-  "id": "HESO-100"
+  "id": "HESO-100",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-101.jpg",
   "thumb": "assets/thumbs/HESO-101.jpg",
   "name": "HESO 101",
-  "id": "HESO-101"
+  "id": "HESO-101",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-102.jpg",
   "thumb": "assets/thumbs/HESO-102.jpg",
   "name": "HESO 102",
-  "id": "HESO-102"
+  "id": "HESO-102",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-103.jpg",
   "thumb": "assets/thumbs/HESO-103.jpg",
   "name": "HESO 103",
-  "id": "HESO-103"
+  "id": "HESO-103",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-104.jpg",
   "thumb": "assets/thumbs/HESO-104.jpg",
   "name": "HESO 104",
-  "id": "HESO-104"
+  "id": "HESO-104",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-105.jpg",
   "thumb": "assets/thumbs/HESO-105.jpg",
   "name": "HESO 105",
-  "id": "HESO-105"
+  "id": "HESO-105",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-106.jpg",
   "thumb": "assets/thumbs/HESO-106.jpg",
   "name": "HESO 106",
-  "id": "HESO-106"
+  "id": "HESO-106",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-107.jpg",
   "thumb": "assets/thumbs/HESO-107.jpg",
   "name": "HESO 107",
-  "id": "HESO-107"
+  "id": "HESO-107",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-108.jpg",
   "thumb": "assets/thumbs/HESO-108.jpg",
   "name": "HESO 108",
-  "id": "HESO-108"
+  "id": "HESO-108",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-109.jpg",
   "thumb": "assets/thumbs/HESO-109.jpg",
   "name": "HESO 109",
-  "id": "HESO-109"
+  "id": "HESO-109",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-11.jpg",
   "thumb": "assets/thumbs/HESO-11.jpg",
   "name": "HESO 11",
-  "id": "HESO-11"
+  "id": "HESO-11",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-110.jpg",
   "thumb": "assets/thumbs/HESO-110.jpg",
   "name": "HESO 110",
-  "id": "HESO-110"
+  "id": "HESO-110",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-111.jpg",
   "thumb": "assets/thumbs/HESO-111.jpg",
   "name": "HESO 111",
-  "id": "HESO-111"
+  "id": "HESO-111",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-112.jpg",
   "thumb": "assets/thumbs/HESO-112.jpg",
   "name": "HESO 112",
-  "id": "HESO-112"
+  "id": "HESO-112",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-113.jpg",
   "thumb": "assets/thumbs/HESO-113.jpg",
   "name": "HESO 113",
-  "id": "HESO-113"
+  "id": "HESO-113",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-114.jpg",
   "thumb": "assets/thumbs/HESO-114.jpg",
   "name": "HESO 114",
-  "id": "HESO-114"
+  "id": "HESO-114",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-115.jpg",
   "thumb": "assets/thumbs/HESO-115.jpg",
   "name": "HESO 115",
-  "id": "HESO-115"
+  "id": "HESO-115",
+  "w": 480,
+  "h": 320
  },
  {
   "file": "assets/photos/HESO-12.jpg",
   "thumb": "assets/thumbs/HESO-12.jpg",
   "name": "HESO 12",
-  "id": "HESO-12"
+  "id": "HESO-12",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-13.jpg",
   "thumb": "assets/thumbs/HESO-13.jpg",
   "name": "HESO 13",
-  "id": "HESO-13"
+  "id": "HESO-13",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-14.jpg",
   "thumb": "assets/thumbs/HESO-14.jpg",
   "name": "HESO 14",
-  "id": "HESO-14"
+  "id": "HESO-14",
+  "w": 480,
+  "h": 696
  },
  {
   "file": "assets/photos/HESO-15.jpg",
   "thumb": "assets/thumbs/HESO-15.jpg",
   "name": "HESO 15",
-  "id": "HESO-15"
+  "id": "HESO-15",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-16.jpg",
   "thumb": "assets/thumbs/HESO-16.jpg",
   "name": "HESO 16",
-  "id": "HESO-16"
+  "id": "HESO-16",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-17.jpg",
   "thumb": "assets/thumbs/HESO-17.jpg",
   "name": "HESO 17",
-  "id": "HESO-17"
+  "id": "HESO-17",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-19.jpg",
   "thumb": "assets/thumbs/HESO-19.jpg",
   "name": "HESO 19",
-  "id": "HESO-19"
+  "id": "HESO-19",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-21.jpg",
   "thumb": "assets/thumbs/HESO-21.jpg",
   "name": "HESO 21",
-  "id": "HESO-21"
+  "id": "HESO-21",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-22.jpg",
   "thumb": "assets/thumbs/HESO-22.jpg",
   "name": "HESO 22",
-  "id": "HESO-22"
+  "id": "HESO-22",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-23.jpg",
   "thumb": "assets/thumbs/HESO-23.jpg",
   "name": "HESO 23",
-  "id": "HESO-23"
+  "id": "HESO-23",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-24.jpg",
   "thumb": "assets/thumbs/HESO-24.jpg",
   "name": "HESO 24",
-  "id": "HESO-24"
+  "id": "HESO-24",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-25.jpg",
   "thumb": "assets/thumbs/HESO-25.jpg",
   "name": "HESO 25",
-  "id": "HESO-25"
+  "id": "HESO-25",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-26.jpg",
   "thumb": "assets/thumbs/HESO-26.jpg",
   "name": "HESO 26",
-  "id": "HESO-26"
+  "id": "HESO-26",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-27.jpg",
   "thumb": "assets/thumbs/HESO-27.jpg",
   "name": "HESO 27",
-  "id": "HESO-27"
+  "id": "HESO-27",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-28.jpg",
   "thumb": "assets/thumbs/HESO-28.jpg",
   "name": "HESO 28",
-  "id": "HESO-28"
+  "id": "HESO-28",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-29.jpg",
   "thumb": "assets/thumbs/HESO-29.jpg",
   "name": "HESO 29",
-  "id": "HESO-29"
+  "id": "HESO-29",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-30.jpg",
   "thumb": "assets/thumbs/HESO-30.jpg",
   "name": "HESO 30",
-  "id": "HESO-30"
+  "id": "HESO-30",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-31.jpg",
   "thumb": "assets/thumbs/HESO-31.jpg",
   "name": "HESO 31",
-  "id": "HESO-31"
+  "id": "HESO-31",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-32.jpg",
   "thumb": "assets/thumbs/HESO-32.jpg",
   "name": "HESO 32",
-  "id": "HESO-32"
+  "id": "HESO-32",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-33.jpg",
   "thumb": "assets/thumbs/HESO-33.jpg",
   "name": "HESO 33",
-  "id": "HESO-33"
+  "id": "HESO-33",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-34.jpg",
   "thumb": "assets/thumbs/HESO-34.jpg",
   "name": "HESO 34",
-  "id": "HESO-34"
+  "id": "HESO-34",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-35.jpg",
   "thumb": "assets/thumbs/HESO-35.jpg",
   "name": "HESO 35",
-  "id": "HESO-35"
+  "id": "HESO-35",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-36.jpg",
   "thumb": "assets/thumbs/HESO-36.jpg",
   "name": "HESO 36",
-  "id": "HESO-36"
+  "id": "HESO-36",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-43.jpg",
   "thumb": "assets/thumbs/HESO-43.jpg",
   "name": "HESO 43",
-  "id": "HESO-43"
+  "id": "HESO-43",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-44.jpg",
   "thumb": "assets/thumbs/HESO-44.jpg",
   "name": "HESO 44",
-  "id": "HESO-44"
+  "id": "HESO-44",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-45.jpg",
   "thumb": "assets/thumbs/HESO-45.jpg",
   "name": "HESO 45",
-  "id": "HESO-45"
+  "id": "HESO-45",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-46.jpg",
   "thumb": "assets/thumbs/HESO-46.jpg",
   "name": "HESO 46",
-  "id": "HESO-46"
+  "id": "HESO-46",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-47.jpg",
   "thumb": "assets/thumbs/HESO-47.jpg",
   "name": "HESO 47",
-  "id": "HESO-47"
+  "id": "HESO-47",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-48.jpg",
   "thumb": "assets/thumbs/HESO-48.jpg",
   "name": "HESO 48",
-  "id": "HESO-48"
+  "id": "HESO-48",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-49.jpg",
   "thumb": "assets/thumbs/HESO-49.jpg",
   "name": "HESO 49",
-  "id": "HESO-49"
+  "id": "HESO-49",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-50.jpg",
   "thumb": "assets/thumbs/HESO-50.jpg",
   "name": "HESO 50",
-  "id": "HESO-50"
+  "id": "HESO-50",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-51.jpg",
   "thumb": "assets/thumbs/HESO-51.jpg",
   "name": "HESO 51",
-  "id": "HESO-51"
+  "id": "HESO-51",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-52.jpg",
   "thumb": "assets/thumbs/HESO-52.jpg",
   "name": "HESO 52",
-  "id": "HESO-52"
+  "id": "HESO-52",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-53.jpg",
   "thumb": "assets/thumbs/HESO-53.jpg",
   "name": "HESO 53",
-  "id": "HESO-53"
+  "id": "HESO-53",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-54.jpg",
   "thumb": "assets/thumbs/HESO-54.jpg",
   "name": "HESO 54",
-  "id": "HESO-54"
+  "id": "HESO-54",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-55.jpg",
   "thumb": "assets/thumbs/HESO-55.jpg",
   "name": "HESO 55",
-  "id": "HESO-55"
+  "id": "HESO-55",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-56.jpg",
   "thumb": "assets/thumbs/HESO-56.jpg",
   "name": "HESO 56",
-  "id": "HESO-56"
+  "id": "HESO-56",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-57.jpg",
   "thumb": "assets/thumbs/HESO-57.jpg",
   "name": "HESO 57",
-  "id": "HESO-57"
+  "id": "HESO-57",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-58.jpg",
   "thumb": "assets/thumbs/HESO-58.jpg",
   "name": "HESO 58",
-  "id": "HESO-58"
+  "id": "HESO-58",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-59.jpg",
   "thumb": "assets/thumbs/HESO-59.jpg",
   "name": "HESO 59",
-  "id": "HESO-59"
+  "id": "HESO-59",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-60.jpg",
   "thumb": "assets/thumbs/HESO-60.jpg",
   "name": "HESO 60",
-  "id": "HESO-60"
+  "id": "HESO-60",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-61.jpg",
   "thumb": "assets/thumbs/HESO-61.jpg",
   "name": "HESO 61",
-  "id": "HESO-61"
+  "id": "HESO-61",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-62.jpg",
   "thumb": "assets/thumbs/HESO-62.jpg",
   "name": "HESO 62",
-  "id": "HESO-62"
+  "id": "HESO-62",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-63.jpg",
   "thumb": "assets/thumbs/HESO-63.jpg",
   "name": "HESO 63",
-  "id": "HESO-63"
+  "id": "HESO-63",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-64.jpg",
   "thumb": "assets/thumbs/HESO-64.jpg",
   "name": "HESO 64",
-  "id": "HESO-64"
+  "id": "HESO-64",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-65.jpg",
   "thumb": "assets/thumbs/HESO-65.jpg",
   "name": "HESO 65",
-  "id": "HESO-65"
+  "id": "HESO-65",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-66.jpg",
   "thumb": "assets/thumbs/HESO-66.jpg",
   "name": "HESO 66",
-  "id": "HESO-66"
+  "id": "HESO-66",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-67.jpg",
   "thumb": "assets/thumbs/HESO-67.jpg",
   "name": "HESO 67",
-  "id": "HESO-67"
+  "id": "HESO-67",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-68.jpg",
   "thumb": "assets/thumbs/HESO-68.jpg",
   "name": "HESO 68",
-  "id": "HESO-68"
+  "id": "HESO-68",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-69.jpg",
   "thumb": "assets/thumbs/HESO-69.jpg",
   "name": "HESO 69",
-  "id": "HESO-69"
+  "id": "HESO-69",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-70.jpg",
   "thumb": "assets/thumbs/HESO-70.jpg",
   "name": "HESO 70",
-  "id": "HESO-70"
+  "id": "HESO-70",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-71.jpg",
   "thumb": "assets/thumbs/HESO-71.jpg",
   "name": "HESO 71",
-  "id": "HESO-71"
+  "id": "HESO-71",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-72.jpg",
   "thumb": "assets/thumbs/HESO-72.jpg",
   "name": "HESO 72",
-  "id": "HESO-72"
+  "id": "HESO-72",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-74.jpg",
   "thumb": "assets/thumbs/HESO-74.jpg",
   "name": "HESO 74",
-  "id": "HESO-74"
+  "id": "HESO-74",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-75.jpg",
   "thumb": "assets/thumbs/HESO-75.jpg",
   "name": "HESO 75",
-  "id": "HESO-75"
+  "id": "HESO-75",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-76.jpg",
   "thumb": "assets/thumbs/HESO-76.jpg",
   "name": "HESO 76",
-  "id": "HESO-76"
+  "id": "HESO-76",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-77.jpg",
   "thumb": "assets/thumbs/HESO-77.jpg",
   "name": "HESO 77",
-  "id": "HESO-77"
+  "id": "HESO-77",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-78.jpg",
   "thumb": "assets/thumbs/HESO-78.jpg",
   "name": "HESO 78",
-  "id": "HESO-78"
+  "id": "HESO-78",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-79.jpg",
   "thumb": "assets/thumbs/HESO-79.jpg",
   "name": "HESO 79",
-  "id": "HESO-79"
+  "id": "HESO-79",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-8.jpg",
   "thumb": "assets/thumbs/HESO-8.jpg",
   "name": "HESO 8",
-  "id": "HESO-8"
+  "id": "HESO-8",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-80.jpg",
   "thumb": "assets/thumbs/HESO-80.jpg",
   "name": "HESO 80",
-  "id": "HESO-80"
+  "id": "HESO-80",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-81.jpg",
   "thumb": "assets/thumbs/HESO-81.jpg",
   "name": "HESO 81",
-  "id": "HESO-81"
+  "id": "HESO-81",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-82.jpg",
   "thumb": "assets/thumbs/HESO-82.jpg",
   "name": "HESO 82",
-  "id": "HESO-82"
+  "id": "HESO-82",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-83.jpg",
   "thumb": "assets/thumbs/HESO-83.jpg",
   "name": "HESO 83",
-  "id": "HESO-83"
+  "id": "HESO-83",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-9.jpg",
   "thumb": "assets/thumbs/HESO-9.jpg",
   "name": "HESO 9",
-  "id": "HESO-9"
+  "id": "HESO-9",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-91.jpg",
   "thumb": "assets/thumbs/HESO-91.jpg",
   "name": "HESO 91",
-  "id": "HESO-91"
+  "id": "HESO-91",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-92.jpg",
   "thumb": "assets/thumbs/HESO-92.jpg",
   "name": "HESO 92",
-  "id": "HESO-92"
+  "id": "HESO-92",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-93.jpg",
   "thumb": "assets/thumbs/HESO-93.jpg",
   "name": "HESO 93",
-  "id": "HESO-93"
+  "id": "HESO-93",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-94.jpg",
   "thumb": "assets/thumbs/HESO-94.jpg",
   "name": "HESO 94",
-  "id": "HESO-94"
+  "id": "HESO-94",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-95.jpg",
   "thumb": "assets/thumbs/HESO-95.jpg",
   "name": "HESO 95",
-  "id": "HESO-95"
+  "id": "HESO-95",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-96.jpg",
   "thumb": "assets/thumbs/HESO-96.jpg",
   "name": "HESO 96",
-  "id": "HESO-96"
+  "id": "HESO-96",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-97.jpg",
   "thumb": "assets/thumbs/HESO-97.jpg",
   "name": "HESO 97",
-  "id": "HESO-97"
+  "id": "HESO-97",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-98.jpg",
   "thumb": "assets/thumbs/HESO-98.jpg",
   "name": "HESO 98",
-  "id": "HESO-98"
+  "id": "HESO-98",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-99.jpg",
   "thumb": "assets/thumbs/HESO-99.jpg",
   "name": "HESO 99",
-  "id": "HESO-99"
+  "id": "HESO-99",
+  "w": 480,
+  "h": 720
  },
  {
   "file": "assets/photos/HESO-78-SUIT.jpg",
   "thumb": "assets/thumbs/HESO-78-SUIT.jpg",
   "name": "HESO 78 — Suit Version",
-  "id": "HESO-78-SUIT"
+  "id": "HESO-78-SUIT",
+  "w": 480,
+  "h": 721
  },
  {
   "file": "assets/photos/HESO-76-SUIT.jpg",
   "thumb": "assets/thumbs/HESO-76-SUIT.jpg",
   "name": "HESO 76 — Suit Version",
-  "id": "HESO-76-SUIT"
+  "id": "HESO-76-SUIT",
+  "w": 480,
+  "h": 721
  },
  {
   "file": "assets/photos/HESO-19-SUIT.jpg",
   "thumb": "assets/thumbs/HESO-19-SUIT.jpg",
   "name": "HESO 19 — Suit Version",
-  "id": "HESO-19-SUIT"
+  "id": "HESO-19-SUIT",
+  "w": 480,
+  "h": 721
  }
 ]
