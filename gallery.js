@@ -145,10 +145,11 @@
     }
     try { history.replaceState(null, '', '#photo-' + slugOf(p)); } catch(e){}
     lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
     var lc = document.getElementById('lbClose'); if (lc) lc.focus();
     preload(idx - 1); preload(idx + 1);
   }
-  function closeLb(){ lb.classList.remove('open'); }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
   document.getElementById('lbClose').addEventListener('click', closeLb);
   document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); openLb(idx - 1); });
   document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); openLb(idx + 1); });
