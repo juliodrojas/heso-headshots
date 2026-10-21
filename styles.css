@@ -488,7 +488,7 @@ body::after{
 
 /* compact contact/footer block (Julio, Oct 21) */
 .logolink{margin-bottom:.8rem;gap:.25rem}
-.logolink img{width:62px;height:62px}
+.logolink img{width:42px;height:42px}
 .logoname{font-size:.92rem}
 .logocta{font-size:.6rem}
 .contact{margin-top:1.4rem;padding-top:1.1rem}
