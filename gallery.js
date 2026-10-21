@@ -61,7 +61,7 @@
       var card = document.createElement('div');
       card.className = 'card' + (selected[keyOf(p)] ? ' sel' : '') + (hiddenIds[p.id] ? ' is-hidden' : '');
       var img = document.createElement('img');
-      img.src = p.thumb || p.file; img.alt = p.name || 'Headshot'; img.loading = 'lazy';
+      img.src = p.thumb || p.file; img.alt = p.name || 'Headshot'; img.loading = 'lazy'; img.decoding = 'async';
       var nm = document.createElement('div');
       nm.className = 'nm'; nm.textContent = p.name || '';
       var badge = document.createElement('div');
@@ -110,6 +110,8 @@
     if (lbDownload){
       lbDownload.href = p.file;
       lbDownload.setAttribute('download', fname(p));
+      var isIOS = /iP(hone|ad|od)/.test(navigator.userAgent || '');
+      lbDownload.textContent = isIOS ? '⬇ OPEN FULL PHOTO — THEN TAP & HOLD TO SAVE' : '⬇ DOWNLOAD PHOTO';
     }
     if (lbAdmin){
       lbAdmin.style.display = isAdmin ? '' : 'none';

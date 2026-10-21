@@ -107,3 +107,24 @@ body.selecting .card .selbadge{display:block}
   .card .selbadge{top:.3rem;right:.3rem;width:1.3rem;height:1.3rem;font-size:.8rem;line-height:1.15rem;border-width:1px}
   .toolbar{gap:.4rem}
 }
+
+/* ---------- mobile optimization: iPhone + Android ---------- */
+html{-webkit-text-size-adjust:100%}
+body{min-height:100dvh;overscroll-behavior-y:none}
+*{-webkit-tap-highlight-color:transparent}
+button,input,select,a{touch-action:manipulation}
+.lightbox{padding:max(1rem,env(safe-area-inset-top)) max(1rem,env(safe-area-inset-right)) max(1rem,env(safe-area-inset-bottom)) max(1rem,env(safe-area-inset-left))}
+.lb-card img{max-height:62dvh}
+.lb-close,.lb-square{min-height:44px}
+.lb-download{display:inline-block;padding:.6rem .4rem}
+.tbtn{min-height:44px}
+#pinGo{min-height:48px}
+#pinInput{min-height:48px}
+@media (max-width:640px){
+  input,select,textarea{font-size:16px}
+  .lb-nav{font-size:2.2rem;padding:.8rem .5rem;min-width:44px;min-height:56px}
+  #lbPrev{left:env(safe-area-inset-left)}
+  #lbNext{right:env(safe-area-inset-right)}
+  .lb-card{padding:.9rem .7rem 1.1rem}
+  .toolbar{padding-left:max(.6rem,env(safe-area-inset-left));padding-right:max(.6rem,env(safe-area-inset-right))}
+}
